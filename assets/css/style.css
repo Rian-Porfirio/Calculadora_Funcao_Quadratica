@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+:root{
+    --color1: #F2EEE9;
+    --color2: #D9BBA0;
+    --color3: #594438;
+    --color4: #A67C58;
+    --color5: #d28c85;
+}
+
+html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+}
+
+header {
+    text-align: center;
+        height: 11.72vh;
+    padding: 26px;
+    background-color: var(--color3);
+    border-bottom: 4px solid #503221;
+}
+
+#main1 {
+    display: flex;
+    padding: 10px;
+        height: 85vh;
+        width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--color1);
+}
+
+#calculos {
+        max-width: 37vw;
+        height: 550px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 8px;
+}
+
+#valores {
+    display: flex;
+        max-width: 100%;
+    padding: 20px;
+    gap: 20px;     
+    flex-wrap: wrap; 
+}
+
+#valores > div > input {
+    padding: 3px;  
+        width: 140px;
+        height: 45px;
+    margin-top: 6px;
+    outline: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+#valores > div > input::placeholder{
+    font-size: 0.79rem;
+    color: rgba(0, 0, 0, 0.545);
+    font-weight: bolder;
+}
+
+#botoes {
+    display: flex;
+        width: 100%;
+        height: 125px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#ibuttonCalc{
+    background-color: rgb(86, 86, 225);
+}
+
+#ibuttonLimpar{
+    background-color: rgb(209, 76, 76);
+}
+.configButo {
+    border-radius: 6px;
+    border: 2px solid black;
+        width: 115px;
+        height: 55px;
+    font-weight: bolder;
+}
+
+.configButo:hover {
+    cursor: pointer;
+}
+
+.configButo:active {
+    transform: scale(0.97);
+    transition: 110ms;
+}
+
+#ibuttonCalc:active{
+    background-color: rgb(74, 74, 201);
+    box-shadow: inset 0px 0px 4px rgb(36, 36, 99);
+}
+
+#ibuttonLimpar:active{
+    background-color: rgb(174, 64, 64);
+    box-shadow: inset 0px 0px 4px rgb(101, 38, 38);
+}
+
+.descValores {
+    font-size: 1.1rem;
+}
+
+#descricoes {
+    border: 2px solid black;
+        width: 500px;
+        height: 550px;
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.ensinamento {
+    padding: 10px;
+        width: 99%;
+        max-height: 500px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    overflow: auto;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+.ensinamento > h1, p{
+    font-size: 1.25rem;
+}
+
+.ensinamento::-webkit-scrollbar,
+ #descricoes::-webkit-scrollbar {
+    display: none;
+}
+
+#formula {
+    display: flex;
+    text-align: center;
+        height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+#formula > span,
+#formula > p {
+    font-size: 2.5rem;
+}
+
+#resultados{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color3);
+}
+
+.dupla{
+    columns: 2;
+    list-style: none;
+    margin-top: 5px;
+}
+
+.sucesso {
+    border: none;
+}
+
+.erro {
+    border: 3px solid rgb(185, 46, 46);
+    box-shadow: 0px 0px 5px 1px rgba(255, 0, 0, 0.579);
+}
+
+.preenchido{
+    background-color: none;
+}
+
+.selecionado {
+    display: none;
+}
+
+.osli{
+    display: block;
+}

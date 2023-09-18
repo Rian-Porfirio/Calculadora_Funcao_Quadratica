@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/validacoes.js"></script>
+    <script src="script/script.js"></script>
+    <title>MatPorfics</title>
+</head>
+<body>
+    <header>
+        <h1>Aprenda equações de maneira simples</h1>
+    </header>
+
+    <main>
+        <section id="main1">
+            <div id="calculos">
+                <h2>Valores</h2>
+                <div id="valores">
+                    <div>
+                        <p class="descValores">C. Angular (a)</p>
+                        <input type="text" id="coeficientAngular" required>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p class="descValores">C. Linear (b)</p>
+                        <input type="text" id="coeficientLinear" required>
+                    </div>
+                    
+                    <div>
+                        <p class="descValores">Independente (c)</p>
+                        <input type="text" id="independente" required>
+                    </div>
+                </div>
+                <div id="botoes">
+                    <button id="ibuttonCalc" class="configButo" onclick="calculadora()">Calcular</button>
+                    <button id="ibuttonLimpar" class="configButo" onclick="limpar()">Limpar</button>
+                </div>
+            </div>
+            <div id="descricoes">
+                <h2>Cálculos</h2>
+                <div class="ensinamento" id="formula">
+                    <p><span class="a">a</span>x²<span class="operadorB">+ </span><span class="b">b</span>x <span class="operadorC">+ </span><span class="c">c</span>
+                    </p>
+                </div>
+
+                <p><b>Resultados</b></p>
+                <div class="ensinamento" id="resultados">
+                    <span>Δ = <span class="delta">resultado</span></span>
+                    <span>| X1 = <span class="valorx1">resultado</span></span>
+                    <span>| X2 = <span class="valorx2">resultado</span></span>
+                </div>
+
+                <p><b>Passos</b></p>
+                <div class="ensinamento" id="passos">
+                    <h3>Identificar os coeficientes da equação</h3>
+                    
+                    <br>
+
+                    <p>Observe a equação do segundo grau no formato geral: ax² + bx + c = 0</p>
+                    <p>Identifique os valores dos coeficientes a, b e c. Esses coeficientes determinam os termos da equação.</p>
+                    <br>
+                    <p>No caso da equação solicitada:</p>
+                    <br>
+                    <ul>
+                        <li><span class="a">a</span>x² 
+                            <span class="operadorB">+</span> 
+                            <span class="b"> b</span>x  
+                            <span class="operadorC">+</span> 
+                            <span class="c"> c</span> = 0
+                        </li>
+                    </ul>
+                    <br>
+                    
+                    <h3>Calcular o discriminante (Δ)</h3>
+
+                    <br>
+
+                    <p>O discriminante (Δ) é calculado pela fórmula: Δ = b²- 4.a.c.</p>
+                    <p>Substitua os valores dos coeficientes a, b e c na fórmula e calcule o valor do discriminante.</p>
+                    
+                    <br>
+                    <ul>
+                        <li>Δ = b² - 4.a.c</li>
+                        <li>Δ = <span class="b">b</span>²- 4.<span class="a">a</span>.<span class="c">c</span></li>
+                        <li>Δ = <span class="bquadrado">b</span> - 4.<span class="a">a</span>.<span class="c">c</span></li>
+                        <li>Δ = <span class="bquadrado">b</span> <span class="operadorAC">-</span> <span id="multiplica">4.a.c</span></li>
+                        <li>Δ = <span class="delta">resultado</span></li>
+                    </ul>
+                </div>
+
+                <p><b>Raízes</b></p>
+                <div class="ensinamento" id="raizes">
+                    <h3>Analisar o valor do discriminante</h3>
+
+                    <br>
+
+                    <p>Dependendo do valor do discriminante, a equação pode ter diferentes tipos de solução:</p>
+                    
+                    <br>
+
+                    <ul>
+                        <li>Se Δ &gt; 0, a equação tem duas raízes reais e distintas.</li>
+                        <li>Se Δ = 0, a equação tem duas raízes reais e iguais.</li>
+                        <li>Se Δ &lt; 0, a equação não tem raízes reais, apenas raízes complexas.</li>
+                    </ul>
+                    
+                    <br>
+
+                    <h3>Calcular as raízes da equação</h3>
+
+                    <br>
+
+                    <p>Se o valor do discriminante for maior que zero (Δ &gt; 0), você pode calcular as duas raízes usando as fórmulas:</p>
+
+                    <br>
+
+                    <ul>
+                        <li>x1 = (-b + √Δ) / (2.a)</li>
+                        <li>x2 = (-b - √Δ) / (2.a)</li>
+                    </ul>
+                    
+                    <br>
+
+                    <p>Se o valor do discriminante for igual a zero (Δ = 0), você pode calcular a única raiz usando a fórmula:</p>
+
+                    <br>
+
+                    <ul>
+                        <li>x = -b / (2.a)</li>
+                    </ul>
+
+                    <br>
+                    
+                    <p>Se o valor do discriminante for menor que zero (Δ &lt; 0), a equação não possui raízes reais.</p>
+
+                    <br>
+                    
+                    <h3>Exibir as soluções das raízes</h3>
+
+                        <ul class="dupla">
+                            <li>x1 = <span class="formulinha1">(-b + √Δ) / (2.a)</span></li>
+                            <li class="selecionado">x1 = (-<span class="b">b</span> + √<span class="delta delta1">Δ</span>) / (2.<span class="a">a</span>)</li>
+                            <li class="selecionado">x1 = (-<span class="b">b</span> + <span class="deltaraiz">√Δ</span>) / (2.<span class="a">a</span>)</li>
+                            <li class="selecionado">x1 = <span class="resultadox1">(-b + √Δ)</span> / <span class="resultado2x1">(2.a)</span></li>
+                            <li class="selecionado">x1 = <span class="valorx1">resultado</span></li>
+                            
+                            <li>x2 = <span class="formulinha2">(-b - √Δ) / (2.a)</span></li>
+                            <li class="selecionado">x2 = (-<span class="b">b</span> - √<span class="delta delta1">Δ</span>) / (2.<span class="a">a</span>)</li>
+                            <li class="selecionado">x2 = (-<span class="b">b</span> - <span class="deltaraiz">√Δ</span>) / (2.<span class="a">a</span>)</li>
+                            <li class="selecionado">x2 = <span class="resultadox2">(-b - √Δ)</span> / <span class="resultado2x1">(2.a)</span></li>
+                            <li class="selecionado">x2 = <span class="valorx2">resultado</span></li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p><i>direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

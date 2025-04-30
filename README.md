@@ -26,7 +26,6 @@ Instruções de como os calculos foram feitos
 
 ## Como clonar este repositório
 
-###### clone o repositório
 ```
 git clone https://github.com/Rian-Porfirio/Calculadora_Funcao_Quadratica.git
 cd Calculadora_Funcao_Quadratica
